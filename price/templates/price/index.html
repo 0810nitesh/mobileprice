@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	{% load static %}
+</head>
+<body style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('{% static 'price/register.jpg' %}'); height: 100vh; background-size: cover; background-position: center;">
+	<header>
+		<div class="main" style="float: right;" >
+			<span style="font-size: 18px; color: #ffff;margin-right: 20px;">Hello {{request.user}}</span>
+			<span><a href="{% url 'logoutuser' %}" style="font-size: 18px; color: #ffff;margin-right: 20px;">Logout</a></span>
+		</div>
+	</header>
+	<div style="position: absolute; top: 25%; padding: 5px 20px;">
+		<form action="{% url 'result' %}">
+			PPI<select id="ppi" name="ppi" style="padding: 4px 15px; border: 1px solid #ffff; background-color: #dddddd; position: relative; left: 100px;">
+					<option value="144">144</option>
+					<option value="240">240</option>
+					<option value="360">360</option>
+					<option value="480">480</option>
+					<option value="720">720</option>
+					<option value="1080">1080</option>
+					<option value="4000">4K</option>
+			</select><br>
+			mAh<select id="mAh" name="mAh" style="padding: 5px 15px; border: 1px solid #dddddd; background-color: #dddddd; position: relative; left: 91px;">
+					<option value="1000">1000</option>
+					<option value="2000">2000</option>
+					<option value="3000">3000</option>
+					<option value="4000">4000</option>
+					<option value="5000">5000</option>
+					<option value="6000">6000</option>
+				</select><br>
+			Video<select id="video" name="video"  style="padding: 5px 15px; border: 1px solid #dddddd; background-color: #dddddd; position: relative; left: 85px;">
+					<option value="144">144</option>
+					<option value="240">240</option>
+					<option value="360">360</option>
+					<option value="480">480</option>
+					<option value="720">720</option>
+					<option value="1080">1080</option>
+					<option value="4000">4K</option>
+				</select><br>
+			Android<select id="os" name="os" style="padding: 5px 15px; border: 1px solid #dddddd; background-color: #dddddd; position: relative; left: 70px;">
+				
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+				</select><br>
+			Ram<select id="ram" name="ram" style="padding: 5px 15px; border: 1px solid #dddddd; background-color: #dddddd; position: relative; left: 93px;">
+				
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="6">6</option>
+					<option value="8">8</option>
+					<option value="12">12</option>
+				</select><br>
+			Internal_memory<select id="memory" name="memory" style="padding: 5px 15px; border: 1px solid #dddddd; background-color: #dddddd; position: relative; left: 10px;">
+				
+					<option value="8">8</option>
+					<option value="16">16</option>
+					<option value="32">32</option>
+					<option value="64">64</option>
+					<option value="128">128</option>
+					<option value="256">256</option>
+				</select>
+			<input type="submit" value="Predict" style="border: 1px solid #fff; padding: 10px 30px; color: #dddddd; background-color: #000; position: relative;top: 120px; ">
+		</form>
+	</div>	
+</body>
+</html>
+	
